@@ -86,8 +86,8 @@ set tw=500
 set wrap "Wrap lines
 
 colorscheme molokai
-map cc v:s!^!#!g <CR><CR>
-map cx v:s!^\s*#!!g <CR>v=<CR>
+"map cc v:s!^!#!g <CR><CR>
+"map cx v:s!^\s*#!!g <CR>v=<CR>
 set t_Co=256
 " guarantees that the NERDTrees for all tabs will be one and the same
 map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
