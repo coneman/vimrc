@@ -33,9 +33,9 @@ endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
-if has("autocmd")
-  filetype plugin indent on
-endif
+"if has("autocmd")
+"  filetype plugin indent on
+"endif
 
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
@@ -79,12 +79,30 @@ set cursorline
 set softtabstop=4
 "set foldmethod=indent
 "set nofoldenable
+set smarttab
+
+set lbr
+set tw=500
+set wrap "Wrap lines
+
 colorscheme molokai
 map cc v:s!^!#!g <CR><CR>
 map cx v:s!^\s*#!!g <CR>v=<CR>
 set t_Co=256
 " guarantees that the NERDTrees for all tabs will be one and the same
 map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
