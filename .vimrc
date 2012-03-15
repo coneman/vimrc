@@ -69,7 +69,7 @@ set incsearch		" Incremental search
 "set mouse=a		" Enable mouse usage (all modes)
 
 set autoindent
-set smartindent
+"set smartindent
 set tabstop=4
 set shiftwidth=4
 set number
@@ -80,6 +80,7 @@ set softtabstop=4
 "set foldmethod=indent
 "set nofoldenable
 set smarttab
+set ruler
 
 set lbr
 set tw=500
@@ -91,6 +92,8 @@ colorscheme molokai
 set t_Co=256
 " guarantees that the NERDTrees for all tabs will be one and the same
 map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+let g:po_translator="Kurniawan Haikal <conecones@gmail.com>"
+let g:po_lang_team="Debian Indonesia Translators <debian-l10n-indonesian@lists.debian.org>"
 
 function! ResCur()
   if line("'\"") <= line("$")
