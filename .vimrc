@@ -81,6 +81,7 @@ set softtabstop=4
 "set nofoldenable
 set smarttab
 set ruler
+set guifont=Monaco\ Bold\ 9
 
 set lbr
 set tw=500
