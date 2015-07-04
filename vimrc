@@ -37,24 +37,6 @@ endif
 "  filetype plugin indent on
 "endif
 
-autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-au BufRead,BufNewFile *.vala            setfiletype vala
-au BufRead,BufNewFile *.vapi            setfiletype vala
-
-" Disable valadoc syntax highlight
-" "let vala_ignore_valadoc = 1
-"
-" " Enable comment strings
-let vala_comment_strings = 1
-"
-" " Highlight space errors
-let vala_space_errors = 1
-" " Disable trailing space errors
-" "let vala_no_trail_space_error = 1
-" " Disable space-tab-space errors
-let vala_no_tab_space_error = 1
-"
 " " Minimum lines used for comment syncing (default 50)
 " "let vala_minlines = 120
 " The following are commented out as they cause vim to behave a lot
@@ -93,8 +75,6 @@ colorscheme molokai
 set t_Co=256
 " guarantees that the NERDTrees for all tabs will be one and the same
 map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-let g:po_translator="Kurniawan Haikal <conecones@gmail.com>"
-let g:po_lang_team="Debian Indonesia Translators <debian-l10n-indonesian@lists.debian.org>"
 
 function! ResCur()
   if line("'\"") <= line("$")
