@@ -67,7 +67,7 @@ set lbr
 set tw=500
 set wrap "Wrap lines
 
-colorscheme molokai
+colorscheme seti
 "map cc v:s!^!#!g <CR><CR>
 "map cx v:s!^\s*#!!g <CR>v=<CR>
 set t_Co=256
